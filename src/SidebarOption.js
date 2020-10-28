@@ -1,9 +1,12 @@
 import React from "react";
 // import "./sidebarOption.css";
 import "./sidebaroption.css";
-function SidebarOption({ Icon, title }) {
+function SidebarOption({ Icon, title, addChannelOption, id }) {
   return (
-    <div className="sidebarOption">
+    <div
+      className="sidebarOption"
+      onClick={addChannelOption ? addChannel : SelectChannel}
+    >
       {Icon && <Icon className="sidebarOption__icon" />}
       {Icon ? (
         <h3>{title}</h3>
